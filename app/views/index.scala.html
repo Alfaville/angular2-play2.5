@@ -1,0 +1,28 @@
+@(title: String)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>@title</title>
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("node_modules/primeui/themes/omega/theme.css")" />
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("stylesheets/font-awesome-4.6.3/css/font-awesome.min.css")" />
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("node_modules/primeui/primeui-ng-all.min.css")" />
+
+        <script src="@routes.Assets.versioned("node_modules/es6-shim/es6-shim.min.js")"></script>
+        <script src="@routes.Assets.versioned("node_modules/zone.js/dist/zone.js")"></script>
+        <script src="@routes.Assets.versioned("node_modules/reflect-metadata/Reflect.js")"></script>
+        <script src="@routes.Assets.versioned("node_modules/systemjs/dist/system.src.js")"></script>
+
+        <script src="@routes.Assets.versioned("systemjs.config.js")"></script>
+        <script>
+          System.import('app').catch(function (err) {
+              console.error(err);
+          });
+        </script>
+    </head>
+    <body>
+        <partial-content>Carregando conteúdo...</partial-content>
+    </body>
+</html>
